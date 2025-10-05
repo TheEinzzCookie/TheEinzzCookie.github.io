@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "title": "Rust Rat with Raspberry Pi 4",
+    "description": "Still in progress",
+    "private": true
+  },
+  {
+    "id": 2,
+    "title": "Tiktok Likes Monitor",
+    "description": "Ability to track the like/unlike action of Tiktok users - even if the account is on private using a combination of multiple TikTok backend API's.",
+    "image": "projects/images/tiktokstalker.png",
+    "demoLink": "https://tiktokstalker.protecter.workers.dev/",
+    "private": false
+  },
+  {
+    "id": 3,
+    "title": "Discord Application Raider",
+    "description": "The Discord application raider is engineered to spam messages based on user interaction in a server, often including invites, URLs, and other content. This spam bot cannot be banned. The only ways to stop the raid are by banning the active user or altering the server permissions. ",
+    "image": "projects/images/raider.png",
+    "private": true
+  },
+{
+    "id": 4,
+    "title": "Python Grabber Malware",
+    "description": "Malware disguisted as cracked Roblox cheats - stole password, cookies and accounts - had the ability to spread after some time automatically managing to infect around 2000 devices, most located in the US and India.",
+    "private": true
+  },
+  {
+    "id": 5,
+    "title": "Microsoft Rewards Automation",
+    "description": "Browser extension which acted as the user - resulting in the daily tasks for Microsoft Rewards to be automated everyday",
+    "private": true
+  },
+  {
+    "id": 6,
+    "title": "Discord User Scanner",
+    "description": "A project in which a Discord Selfbot fetches all users from certain servers. Using access to a database an application makes users able to scan other users after these accounts.",
+    "private": true
+  }
+]
