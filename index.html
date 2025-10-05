@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <title>Hello, You</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+  <!-- Background audio -->
+  <audio id="background-audio" src="assets/sound.mp3"></audio>
+
+  <!-- Blur and Click Overlay -->
+  <div id="clickOverlay" class="click-overlay">
+    <div class="click-text">Click</div>
+  </div>
+
+  <div id="content" class="blurred">
+    <div class="background-container"></div>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+      <div class="nav-container">
+        <button class="nav-btn active" data-page="home">Home</button>
+        <button class="nav-btn" data-page="projects">Projects</button>
+        <button class="nav-btn" data-page="blog">Blog</button>
+      </div>
+    </nav>
+    
+    <!-- Main content area -->
+    <main id="main-content">
+      <!-- Home page content -->
+      <div id="home-page" class="page active">
+        <div class="profile-container">
+          <div class="profile-card">
+            <img src="assets/IMG_2702.jpg" alt="Profile Picture" class="profile-img">
+            <h2>Hello You</h2>
+            <p class="status">Probably Coding <span class="crown">👑</span></p>
+            <div class="profile-details">
+              <p class="username">EinzzCookie</p>
+              <p class="description">Developer</p>
+              <div class="social-icons">
+                <a href="https://discordapp.com/users/672737796699455492" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://github.com/theeinzzcookie" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Projects page content -->
+      <div id="projects-page" class="page">
+        <div class="page-container">
+          <h2 class="page-title">My Projects</h2>
+          <div id="projects-grid" class="projects-grid">
+            <!-- Projects will be loaded here via AJAX -->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Blog page content -->
+      <div id="blog-page" class="page">
+        <div class="page-container">
+          <h2 class="page-title">Blog</h2>
+          <div id="blog-posts" class="blog-posts">
+            <!-- Blog posts will be loaded here via AJAX -->
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

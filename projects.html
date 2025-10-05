@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <title>Projects - Hello, You</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+  <div class="background-container"></div>
+  
+  <nav class="main-nav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="projects.html" class="nav-btn active">Projects</a>
+      <a href="blog.html" class="nav-btn">Blog</a>
+    </div>
+  </nav>
+  
+  <main>
+    <div class="page-container">
+      <h2 class="page-title">My Projects</h2>
+      <div id="projects-grid" class="projects-grid">
+        <!-- Projects will be loaded here -->
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load projects from JSON
+      async function loadProjects() {
+        const projectsGrid = document.getElementById('projects-grid');
+        projectsGrid.innerHTML = '<div class="loading">Loading projects...</div>';
+        
+        try {
+          const response = await fetch('projects/projects.json');
+          if (!response.ok) {
+            throw new Error('Failed to load projects');
+          }
+          const projects = await response.json();
+          displayProjects(projects);
+        } catch (error) {
+          console.error('Error loading projects:', error);
+          projectsGrid.innerHTML = '<div class="loading">Error loading projects. Please try again later.</div>';
+        }
+      }
+      
+      function displayProjects(projects) {
+        const projectsGrid = document.getElementById('projects-grid');
+        projectsGrid.innerHTML = '';
+        
+        if (projects.length === 0) {
+          projectsGrid.innerHTML = '<div class="loading">No projects found.</div>';
+          return;
+        }
+        
+        projects.forEach(project => {
+          const projectCard = document.createElement('div');
+          projectCard.className = 'project-card';
+          
+          projectCard.innerHTML = `
+            ${project.image ? `<img src="${project.image}" alt="" class="project-image">` : ''}
+            <h3 class="project-title">${project.title}</h3>
+            <p class="project-description">${project.description}</p>
+            <div class="project-links">
+              ${project.demoLink ? `<a href="${project.demoLink}" class="project-link" target="_blank">Demo</a>` : ''}
+              ${project.codeLink ? `<a href="${project.codeLink}" class="project-link" target="_blank">Code</a>` : ''}
+              ${project.private ? `<a href="${project.private}" class="project-link" target="_blank">Private</a>` : ''}
+            </div>
+          `;
+          
+          projectsGrid.appendChild(projectCard);
+        });
+      }
+      
+      // Load projects on page load
+      loadProjects();
+    });
+  </script>
+</body>
+</html>
