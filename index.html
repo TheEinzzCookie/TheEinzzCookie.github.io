@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EinzzCookie — Discord</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <div class="profile-modal">
+    <!-- LEFT -->
+    <div class="profile-left">
+      <!-- Updated banner section with GIF -->
+      <div class="banner">
+        <img id="bannerGif" class="banner-gif" alt="Profile Banner">
+      </div>
+      <div class="avatar-wrap">
+        <img id="avatar" class="avatar">
+        <span class="status"></span>
+      </div>
+      <div class="left-content">
+        <h1 id="displayName"></h1>
+        <div id="tagline" class="tagline"></div>
+        <div id="customStatus" class="bubble"></div>
+        <div class="buttons">
+          <button id="messageBtn" class="primary">Message</button>
+          <button id="menuBtn" class="icon">⋯</button>
+        </div>
+        <p id="bio" class="bio"></p>
+        <div class="section">
+          <span>
+            
+          </span>
+          <a id="vibeLink"></a>
+        </div>
+        <div class="section">
+          <span>Member since</span>
+          <p id="memberSince"></p>
+        </div>
+        <div class="section">
+          <span>Connections</span>
+          <div id="links" class="links"></div>
+        </div>
+      </div>
+    </div>
+    <!-- RIGHT -->
+    <div class="profile-right">
+      <div class="tabs">
+        <button class="tab active" data-tab="activity">Activity</button>
+        <button class="tab" data-tab="projects">Projects</button>
+        <button class="tab" data-tab="servers">Servers</button>
+      </div>
+      <div id="tabContent"></div>
+    </div>
+  </div>
+</div>
+<script src="profile-settings.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
