@@ -1,61 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>EinzzCookie — Discord</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div class="app">
-  <div class="profile-modal">
-    <!-- LEFT -->
-    <div class="profile-left">
-      <!-- Updated banner section with GIF -->
-      <div class="banner">
-        <img id="bannerGif" class="banner-gif" alt="Profile Banner">
-      </div>
-      <div class="avatar-wrap">
-        <img id="avatar" class="avatar">
-        <span class="status"></span>
-      </div>
-      <div class="left-content">
-        <h1 id="displayName"></h1>
-        <div id="tagline" class="tagline"></div>
-        <div id="customStatus" class="bubble"></div>
-        <div class="buttons">
-          <button id="messageBtn" class="primary">Message</button>
-          <button id="menuBtn" class="icon">⋯</button>
+<html>
+    <head>
+        <title>EinzzCookie's Basement!</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="assets/website-icon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">    
+    </head>
+    <body>
+        <div class="content-wrapper">
+            <div class="site-navigation">
+                <a href="/">
+                    <h1 class="username-nav">einzzcookie</h1>
+                </a>
+                <div class="navigation-bar">
+                    <a href="/">homepage</a>
+                    <a href="https://www.roblox.com/games/5213359132/Nr-1-Eigenes-Spiel-bauen#!/store" class="donation-link">
+                        <img src="assets/navigation/donation-heart.png" />
+                        <span>donate!</span>
+                    </a>
+                </div>
+            </div>
+            <div class="site-content">
+                <div class="sidebar-info">
+                    <!-- User information, just the profile picture and name -->
+                    <img src="assets/profile-picture.png" class="profile-pic-sb" />
+                    <h1 class="username-sb">einzzcookie</h1>
+                    <!-- Quote about the user, this was just for fun -->
+                    <p style="font-style: italic;">"Fight till death" - Macbeth</p>
+                    <p class="about-bio">I program from time to time, possibly.</p>
+                    <!-- The user details, this is like their locale, socials, etc -->
+                    <ul class="user-details-ul">
+                        <li>
+                            <img src="assets/social-icons/discord.png" />
+                            <span><a href="https://discord.com/users/672737796699455492">@einzzcookie</a></span>
+                        </li>
+                        <li>
+                            <img src="assets/social-icons/github.png" />
+                            <span><a href="https://github.com/theeinzzcookie">@theeinzzcookie</a></span>
+                        </li>
+                        <li>
+                            <img src="assets/social-icons/tiktok.png" />
+                            <span><a href="https://tiktok.com/@theeinzzcookie">@theeinzzcookie</a></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about-user">
+                    <h1>Welcome!</h1>
+                    <p>I'm einzzcookie, also known as cookie, a 18 year old from Germany. I like messing around with technology, mainly computers and phones, but I'm open to other options aswell.</p>
+                    <h1>My Skills</h1>
+                    <p>I know a few languages, however I specialize in Rust and Python mainly, so I have made quite a few applications before. For the web, I use raw HTML and CSS with nearly no other frameworks involved.</a> I really enjoy coding in IntelliJ or VSC depending on the project type. I am working on both Windows and Linux </a>so I am quite familiar with terminals.</p>
+                    <h1>My Projects</h1>
+                    <p>I'm working on a few projects at the moment, they are mainly to do with projects from around 2018. One of my most popular projects at the moment is <a href="https://tiktokstalker.protecter.workers.dev/">TiktokStalker</a>, which is a website/game to monitor liking activity of TikTok accounts. Here's a list of the projects I am currently working on:</p>
+                    <ul class="projects-ul">
+                        <li>
+                            <span><a href="https://tiktokstalker.protecter.workers.dev/">TikTokStalker Site:</a> A website to monitor like/unlike activity of TikTok accounts even if they are private</span>
+                        </li>
+                        <li>
+                            <span><a href="https://www.roblox.com/games/73638148747148/TikTok-Stalker">TikTokStalker Game:</a> A Roblox game for the TikTokStalker site - yet more features then the site</span>
+                        </li>
+                        <li>
+                            <span><a href="https://webhook.protecter.workers.dev/">Discord Webhook Relay:</a> A small site that relays your Discord webhook messages over another site</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <p id="bio" class="bio"></p>
-        <div class="section">
-          <span>
-            
-          </span>
-          <a id="vibeLink"></a>
-        </div>
-        <div class="section">
-          <span>Member since</span>
-          <p id="memberSince"></p>
-        </div>
-        <div class="section">
-          <span>Connections</span>
-          <div id="links" class="links"></div>
-        </div>
-      </div>
-    </div>
-    <!-- RIGHT -->
-    <div class="profile-right">
-      <div class="tabs">
-        <button class="tab active" data-tab="activity">Activity</button>
-        <button class="tab" data-tab="projects">Projects</button>
-        <button class="tab" data-tab="servers">Servers</button>
-      </div>
-      <div id="tabContent"></div>
-    </div>
-  </div>
-</div>
-<script src="profile-settings.js"></script>
-<script src="script.js"></script>
-</body>
+    </body>
 </html>
